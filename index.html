@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio developera Minecraft i Discord — pluginy, boty, serwery, automatyzacje i integracje.">
+  <meta name="theme-color" content="#111827">
+  <title>DevCraft Studio — Minecraft & Discord Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header" data-header>
+    <nav class="nav" aria-label="Główna nawigacja">
+      <a class="brand" href="#hero" aria-label="Strona główna">
+        <span class="brand__mark">DC</span>
+        <span class="brand__text">DevCraft<span> Studio</span></span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links" data-menu>
+        <a href="#services">Usługi</a>
+        <a href="#projects">Projekty</a>
+        <a href="#process">Proces</a>
+        <a href="#contact" class="nav__cta">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="hero">
+      <div class="hero__content reveal">
+        <p class="eyebrow">Minecraft & Discord Developer</p>
+        <h1>Buduję techniczne zaplecze społeczności, które chce rosnąć.</h1>
+        <p class="hero__lead">Projektuję pluginy Minecraft, boty Discord, panele administracyjne i integracje, które automatyzują moderację, ekonomię, eventy oraz obsługę graczy.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#contact">Zacznijmy projekt</a>
+          <a class="button button--ghost" href="#projects">Zobacz realizacje</a>
+        </div>
+        <dl class="hero__stats" aria-label="Najważniejsze liczby">
+          <div><dt>4+</dt><dd>lata doświadczenia</dd></div>
+          <div><dt>35+</dt><dd>wdrożeń</dd></div>
+          <div><dt>24/7</dt><dd>stabilne systemy</dd></div>
+        </dl>
+      </div>
+      <div class="hero__visual reveal" aria-hidden="true">
+        <div class="terminal-card">
+          <div class="terminal-card__bar"><span></span><span></span><span></span></div>
+          <pre><code>$ deploy network
+✔ Paper plugin loaded
+✔ Discord bot online
+✔ Economy synced
+✔ Players protected</code></pre>
+        </div>
+        <div class="floating-card floating-card--mc">⛏️ Custom pluginy</div>
+        <div class="floating-card floating-card--dc">🤖 Boty Discord</div>
+      </div>
+    </section>
+
+    <section class="section trusted reveal" aria-label="Technologie">
+      <span>Java</span><span>Kotlin</span><span>Paper API</span><span>Velocity</span><span>Node.js</span><span>Discord.js</span><span>MySQL</span><span>Redis</span>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section__heading reveal">
+        <p class="eyebrow">Oferta</p>
+        <h2>Kompletne rozwiązania dla serwerów i społeczności.</h2>
+        <p>Od pomysłu i architektury po deployment na GitHub Pages, VPS lub hosting Minecraft.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="service-card reveal">
+          <div class="card-icon">🧩</div>
+          <h3>Pluginy Minecraft</h3>
+          <p>Dedykowane tryby gry, systemy rang, ekonomia, questy, sklepy, zabezpieczenia i wydajne integracje z bazami danych.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="card-icon">🤖</div>
+          <h3>Boty Discord</h3>
+          <p>Moderacja, ticket system, logi, automatyczne role, powiadomienia z serwera, płatności i dashboardy administracyjne.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="card-icon">🔗</div>
+          <h3>Integracje</h3>
+          <p>Synchronizacja kont, whitelisty, rankingi, statystyki, webhooki, API oraz automatyzacje łączące Minecraft z Discordem.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section__heading reveal">
+        <p class="eyebrow">Realizacje</p>
+        <h2>Projekty gotowe do pokazania klientom.</h2>
+      </div>
+      <div class="project-list">
+        <article class="project-card reveal">
+          <div>
+            <p class="project-card__tag">Minecraft Network</p>
+            <h3>System ekonomii i zadań sezonowych</h3>
+            <p>Plugin Paper z konfiguracją eventów, skalowalną bazą MySQL i panelami dla administracji.</p>
+          </div>
+          <ul><li>Paper API</li><li>MySQL</li><li>Redis cache</li></ul>
+        </article>
+        <article class="project-card reveal">
+          <div>
+            <p class="project-card__tag">Discord Community</p>
+            <h3>Bot moderacyjny z ticketami</h3>
+            <p>Komendy slash, automatyczne logi, system ostrzeżeń i prywatne kanały pomocy dla użytkowników.</p>
+          </div>
+          <ul><li>Discord.js</li><li>Node.js</li><li>Webhooks</li></ul>
+        </article>
+        <article class="project-card reveal">
+          <div>
+            <p class="project-card__tag">Cross-platform</p>
+            <h3>Połączenie kont Minecraft ↔ Discord</h3>
+            <p>Bezpieczna weryfikacja użytkowników, nadawanie rang i synchronizacja whitelisty w czasie rzeczywistym.</p>
+          </div>
+          <ul><li>REST API</li><li>Velocity</li><li>PostgreSQL</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="section__heading reveal">
+        <p class="eyebrow">Proces</p>
+        <h2>Przejrzysta współpraca od briefu do wdrożenia.</h2>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><strong>01. Analiza</strong><span>Ustalamy zakres, priorytety, budżet i wymagania techniczne.</span></li>
+        <li class="reveal"><strong>02. Projekt</strong><span>Tworzę architekturę, makiety przepływów i harmonogram dostarczenia.</span></li>
+        <li class="reveal"><strong>03. Development</strong><span>Implementuję funkcje, testuję scenariusze i pokazuję postępy.</span></li>
+        <li class="reveal"><strong>04. Wdrożenie</strong><span>Publikuję projekt, dokumentuję konfigurację i wspieram po starcie.</span></li>
+      </ol>
+    </section>
+
+    <section class="section contact reveal" id="contact">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2>Masz pomysł na plugin, bota albo stronę społeczności?</h2>
+        <p>Napisz na Discordzie lub mailowo. Podmień poniższe dane na swoje przed publikacją na GitHub Pages.</p>
+      </div>
+      <div class="contact__panel">
+        <a href="mailto:kontakt@example.com">kontakt@example.com</a>
+        <a href="https://discord.com/" target="_blank" rel="noreferrer">Discord: twoj_nick</a>
+        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub: twoj-profil</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span data-year></span> DevCraft Studio. Portfolio hostowane statycznie, gotowe pod GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
