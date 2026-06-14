@@ -1,0 +1,6 @@
+{
+  "nazwa": "BossPlugin",
+  "opis": "Plugin dodający bossa, nagrody, scoreboard i wiele więcej.",
+  "wersja": "4.6.9",
+  "technologie": ["Java", "Paper API", "MySQL"]
+}
