@@ -170,7 +170,7 @@ const loadServerCards = async () => {
         <article class="server-card reveal">
           ${logoFile ? `<img class="server-card__logo" src="${logoFile.download_url}" alt="Logo serwera ${escapeHtml(name)}">` : ''}
           <div>
-            <p class="server-card__tag">Serwer Minecraft</p>
+            <p class="server-card__tag">Serwer</p>
             <h3>${escapeHtml(name)}</h3>
             <p>${escapeHtml(description)}</p>
           </div>
