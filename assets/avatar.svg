@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Shadowskyy avatar">
+  <defs>
+    <radialGradient id="glow" cx="35%" cy="20%" r="75%">
+      <stop offset="0" stop-color="#ff3b3b"/>
+      <stop offset="0.45" stop-color="#9f1111"/>
+      <stop offset="1" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff4d4d"/>
+      <stop offset="1" stop-color="#3b0505"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#050505"/>
+  <rect x="18" y="18" width="476" height="476" rx="112" fill="url(#glow)" stroke="url(#edge)" stroke-width="10"/>
+  <path d="M120 372c41 42 92 62 153 62 75 0 126-36 126-93 0-69-58-86-116-100-51-12-82-19-82-48 0-24 23-38 60-38 36 0 72 13 105 39l28-63c-36-31-81-47-135-47-76 0-128 40-128 98 0 68 57 85 114 99 52 13 83 20 83 50 0 23-22 35-58 35-43 0-82-17-119-51l-31 57z" fill="#fff" opacity="0.96"/>
+  <path d="M107 96h298v34H107zM107 382h298v34H107z" fill="#ff5a5a" opacity="0.35"/>
+</svg>
