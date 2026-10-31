@@ -46,7 +46,7 @@ code { color: #ffb4b4; font-family: "JetBrains Mono", monospace; }
 .nav { max-width: 1180px; margin: 0 auto; min-height: 76px; padding: 0 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .75rem; font-weight: 900; letter-spacing: -.04em; }
 .brand__avatar { width: 46px; height: 46px; border-radius: 15px; object-fit: cover; box-shadow: 0 14px 34px rgba(239, 27, 27, .34); border: 1px solid rgba(255, 255, 255, .16); }
-.brand__text span { color: var(--accent); }
+.brand__text { color: var(--accent); }
 .nav__links { display: flex; align-items: center; gap: .5rem; }
 .nav__links a { padding: .65rem .9rem; color: var(--muted); font-weight: 800; border-radius: 999px; transition: .2s ease; }
 .nav__links a:hover { color: var(--text); background: rgba(255, 59, 59, .09); }
