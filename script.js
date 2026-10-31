@@ -1,6 +1,6 @@
 const REPOSITORY = {
-  owner: 'shadowskyy',
-  name: 'Portfolio',
+  owner: 'sh4ad0wskyy',
+  name: 'portfolio',
   branch: 'main',
 };
 
@@ -61,13 +61,20 @@ const fetchJson = async (url) => {
   const response = await fetch(url, { headers: { Accept: 'application/vnd.github+json' } });
 
   if (!response.ok) {
-    throw new Error(`Nie można pobrać danych: ${response.status}`);
+    throw new Error(`Nie można pobrać danych (${response.status}): ${url}`);
   }
 
   return response.json();
 };
 
-const asArray = (value) => Array.isArray(value) ? value : [];
+const asArray = (value) => {
+  if (Array.isArray(value)) return value;
+  if (typeof value === 'string') {
+    return value.split(',').map((item) => item.trim()).filter(Boolean);
+  }
+  return [];
+};
+
 const textOr = (value, fallback) => typeof value === 'string' && value.trim() ? value.trim() : fallback;
 
 const findFirstFile = (files, match) => files.find((file) => file.type === 'file' && match(file.name.toLowerCase()));
@@ -81,7 +88,7 @@ const escapeHtml = (value) => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
   .replaceAll('>', '&gt;')
-  .replaceAll('\"', '&quot;')
+  .replaceAll('"', '&quot;')
   .replaceAll("'", '&#39;');
 
 const buildMeta = (items) => items
@@ -122,7 +129,7 @@ const loadPluginCards = async () => {
           <div class="project-card__meta">
             ${buildMeta([version && `v${version}`, ...technologies])}
           </div>
-          ${jarFile ? `<a class="project-card__download" href="${jarFile.download_url}" download>Pobierz .jar</a>` : ''}
+          ${jarFile ? `<a class="project-card__download" href="${escapeHtml(jarFile.download_url)}" download>Pobierz .jar</a>` : ''}
         </article>`;
     }));
 
@@ -136,7 +143,8 @@ const loadPluginCards = async () => {
 
     observeReveal(pluginsList);
   } catch (error) {
-    setEmptyState(pluginsList, 'Nie udało się załadować pluginów. Upewnij się, że katalog <code>projekty/</code> istnieje w publicznym repozytorium.');
+    console.error('[Portfolio] Nie udało się załadować pluginów:', error);
+    setEmptyState(pluginsList, 'Nie udało się załadować pluginów. Sprawdź konsolę przeglądarki i dostęp do repozytorium GitHub.');
   }
 };
 
@@ -168,7 +176,7 @@ const loadServerCards = async () => {
 
       return `
         <article class="server-card reveal">
-          ${logoFile ? `<img class="server-card__logo" src="${logoFile.download_url}" alt="Logo serwera ${escapeHtml(name)}">` : ''}
+          ${logoFile ? `<img class="server-card__logo" src="${escapeHtml(logoFile.download_url)}" alt="Logo serwera ${escapeHtml(name)}">` : ''}
           <div>
             <p class="server-card__tag">Serwer</p>
             <h3>${escapeHtml(name)}</h3>
@@ -191,7 +199,8 @@ const loadServerCards = async () => {
 
     observeReveal(serversList);
   } catch (error) {
-    setEmptyState(serversList, 'Nie udało się załadować serwerów. Upewnij się, że katalog <code>serwery/</code> istnieje w publicznym repozytorium.');
+    console.error('[Portfolio] Nie udało się załadować serwerów:', error);
+    setEmptyState(serversList, 'Nie udało się załadować serwerów. Sprawdź konsolę przeglądarki i dostęp do repozytorium GitHub.');
   }
 };
 
