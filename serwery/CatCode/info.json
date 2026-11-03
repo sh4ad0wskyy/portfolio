@@ -4,5 +4,8 @@
   "tryb": "catcode.cat",
   "adres": "Manager",
   "status": "+800 osób",
-  "technologie": "Brak, Brak2"
+  "tagi": [
+    "Minecraft",
+    "Discord"
+  ]
 }
