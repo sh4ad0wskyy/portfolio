@@ -128,3 +128,38 @@ h3 { font-size: 1.35rem; letter-spacing: -.03em; }
   .floating-card { position: static; margin-top: 1rem; justify-self: start; }
   .profile-card { transform: none; }
 }
+
+
+/* Ulepszenia dostępności i animacji */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.nav__toggle {
+  cursor: pointer;
+}
+
+html.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+html.js-enabled .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html.js-enabled .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
