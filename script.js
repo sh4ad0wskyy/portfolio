@@ -223,7 +223,6 @@ galleryDialog.addEventListener('click', (event) => {
 galleryDialog.addEventListener('close', () => {
   galleryImage.removeAttribute('src');
   activeGallery = [];
-  galleryRegistry.clear();
   if (galleryReturnFocus && document.contains(galleryReturnFocus)) galleryReturnFocus.focus();
   galleryReturnFocus = null;
 });
