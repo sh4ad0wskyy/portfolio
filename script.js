@@ -241,6 +241,27 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+pluginsList?.addEventListener('error', (event) => {
+  const image = event.target;
+  if (!(image instanceof HTMLImageElement)) return;
+
+  const cover = image.closest('.project-card__cover');
+  if (cover) {
+    const placeholder = document.createElement('div');
+    placeholder.className = 'project-card__cover project-card__cover--placeholder';
+    placeholder.textContent = 'Nie udało się załadować zdjęcia';
+    cover.replaceWith(placeholder);
+    return;
+  }
+
+  const thumbnail = image.closest('.project-card__thumbnail');
+  if (thumbnail) {
+    const gallery = thumbnail.closest('.project-card__gallery');
+    thumbnail.remove();
+    if (gallery && !gallery.querySelector('.project-card__thumbnail')) gallery.remove();
+  }
+}, true);
+
 pluginsList?.addEventListener('click', (event) => {
   const trigger = event.target instanceof Element
     ? event.target.closest('[data-gallery-id][data-gallery-index]')
