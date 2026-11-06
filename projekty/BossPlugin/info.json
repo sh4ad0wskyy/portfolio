@@ -1,10 +1,13 @@
-
 {
   "nazwa": "CatCode-Bot",
   "opis": "Bot discord stworzony we współpracy z B1ACHARA dla serwera CatCode.",
   "wersja": "3.0.2",
-  "technologie": ["JS", "DiscordJS", "MySQL"],
-  "cover": "cover.png",
+  "technologie": [
+    "JS",
+    "DiscordJS",
+    "MySQL"
+  ],
+  "cover": "screenshots/cover.png",
   "screenshots": [
     "screenshots/screenshot-1.png",
     "screenshots/screenshot-2.png",
@@ -16,4 +19,3 @@
     "screenshots/screenshot-8.png"
   ]
 }
-
