@@ -1,6 +1,19 @@
+
 {
-  "nazwa": "BossPlugin",
-  "opis": "Plugin dodający bossa, nagrody, scoreboard i wiele więcej.",
-  "wersja": "4.6.9",
-  "technologie": ["Java", "Paper API", "MySQL"]
+  "nazwa": "CatCode-Bot",
+  "opis": "Bot discord stworzony we współpracy z B1ACHARA dla serwera CatCode.",
+  "wersja": "3.0.2",
+  "technologie": ["JS", "DiscordJS", "MySQL"],
+  "cover": "cover.png",
+  "screenshots": [
+    "screenshots/screenshot-1.png",
+    "screenshots/screenshot-2.png",
+    "screenshots/screenshot-3.png",
+    "screenshots/screenshot-4.png",
+    "screenshots/screenshot-5.png",
+    "screenshots/screenshot-6.png",
+    "screenshots/screenshot-7.png",
+    "screenshots/screenshot-8.png"
+  ]
 }
+
